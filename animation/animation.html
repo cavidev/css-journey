@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-color: rgb(37, 37, 37);
+            }
+            code {
+                font-family: 'Victor Mono', Courier, monospace;
+                color: aliceblue;
+                font-size: 12px;
+                line-height: normal;
+
+                .class {
+                    color: orange;
+                }
+                .reservationWord {
+                    color: mediumslateblue;
+                }
+                .method {
+                    color: aqua;
+                }
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 50px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: max-content;
+                gap: 20px;
+            }
+
+            .box {
+                width: 30px;
+                height: 30px;
+                background-color: aquamarine;
+            }
+            
+            .rotate {
+                animation: rotate 3s infinite;
+            }
+            @keyframes rotate {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+
+            .pulse {
+                animation: pulse 2s infinite;
+            }
+            @keyframes pulse {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.2); }
+
+            }
+
+            .slideIn {
+                animation: slideIn 2s infinite;
+            }
+            @keyframes slideIn {
+                0% { transform: translateX(-50%); }
+                50% { transform: translateX(0); }
+                100% { transform: translateX(50%); }
+            }
+
+            .fadeIn {
+                animation: fadeIn 2s infinite;
+            }
+            @keyframes fadeIn {
+                0% { opacity: 0;}
+                50% { opacity: 5;}
+                100% { opacity: 0;}
+            }
+
+            .bounce{
+                animation: bounce 2s infinite;
+            }
+            @keyframes bounce {
+                0% { transform: translateY(0);}
+                40% { transform: translateY(-20px);}
+                60% { transform: translateY(-10px);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" >
+            <div class="card" >
+                <div class="box rotate"></div>
+                <code>
+                    <span class="class">.rotate</span> { <br>
+                        &emsp;animation: rotate 3s infinite;<br>
+                    }<br>
+                    <span class="reservationWord">@keyframes</span> rotate {<br>
+                        &emsp;0% { transform: <span class="method">rotate</span> (0deg); }<br>
+                        &emsp;100% { transform: <span class="method">rotate</span> (360deg); }<br>
+                    }
+                </code>
+            </div>
+            <div class="card" >
+                <div class="box pulse"></div>
+                <code>
+                    <span class="class">.pulse</span> { <br>
+                        &emsp;animation: pulse 3s infinite;<br>
+                    }<br>
+                    <span class="reservationWord">@keyframes</span> pulse {<br>
+                        &emsp;0%, 100% { transform: <span class="method">scale</span> (1); }<br>
+                        &emsp;50% { transform: <span class="method">scale</span> (1.2); }<br>
+                    }
+                </code>
+            </div>
+            <div class="card" >
+                <div class="box slideIn"></div>
+                <code>
+                    <span class="class">.slideIn</span> { <br>
+                        &emsp;animation: slideIn 3s infinite;<br>
+                    }<br>
+                    <span class="reservationWord">@keyframes</span> slideIn {<br>
+                        &emsp;0% { transform: <span class="method">translateX</span>(-50%); }<br>
+                        &emsp;50% { transform: <span class="method">translateX</span>(0); }<br>
+                        &emsp;100% { transform: <span class="method">translateX</span>(50%); }<br>
+                    }
+                </code>
+            </div>
+            <div class="card" >
+                <div class="box fadeIn"></div>
+                <code>
+                    <span class="class">.fadeIn</span> { <br>
+                        &emsp;animation: fadeIn 3s infinite;<br>
+                    }<br>
+                    <span class="reservationWord">@keyframes</span> fadeIn {<br>
+                        &emsp;0% { opacity: 0;}<br>
+                        &emsp;50% { opacity: 5;}<br>
+                        &emsp;100% { opacity: 0;}<br>
+                    }
+                </code>
+            </div>
+            <div class="card" >
+                <div class="box bounce"></div>
+                <code>
+                    <span class="class">.bounce</span> { <br>
+                        &emsp;animation: bounce 3s infinite;<br>
+                    }<br>
+                    <span class="reservationWord">@keyframes</span> bounce {<br>
+                        &emsp;0% { transform: <span class="method">translateY</span>(0);}<br>
+                        &emsp;40% { transform: <span class="method">translateY</span>(-20px);}<br>
+                        &emsp;60% { transform: <span class="method">translateY</span>(-10px);}<br>
+                    }
+                </code>
+            </div>
+            <div class="card" >
+                <div class="box bounce"></div>
+                <code>
+                    <span class="class">.bounce</span> { <br>
+                        &emsp;animation: bounce 3s infinite;<br>
+                    }<br>
+                    <span class="reservationWord">@keyframes</span> bounce {<br>
+                        &emsp;0% { transform: <span class="method">translateY</span>(0);}<br>
+                        &emsp;40% { transform: <span class="method">translateY</span>(-20px);}<br>
+                        &emsp;60% { transform: <span class="method">translateY</span>(-10px);}<br>
+                    }
+                </code>
+            </div>
+        </div>
+
+    </body>
+</html>
